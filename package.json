@@ -1,0 +1,25 @@
+
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namaste react course from Zero to Hero...",
+  "keywords": [
+    "react",
+    "namaste-react",
+    "javascript"
+  ],
+
+  "license": "ISC",
+  "author": "Naveen Singh",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}

@@ -1,0 +1,24 @@
+## Namaste React
+
+- Journey from Zero to Hero
+
+## npm pakage parcel
+
+- it creates a Dev build
+- it creats a local server and hosted it
+- parcel automatically refreshing your page also Which is knowns as HMR = Hot Module Replacement --> automatic refresh whenever we make a any changes
+- parcel uses a "File watching Algorithm" - written in C++
+- Parcel caches things --> that's why it gives u faster build 
+- everytime we build the app it caches in .parcel-cache/    folder --it is like binary files
+- image optimisation
+- Do minification
+- Do bundlng
+- Do compressing
+- Consistence Hashing
+- Code splitting
+- Differential bunldling - to support older browser and devices or simple browser compatible/Device Compatible
+- Diagnostic
+- Error Handling
+- HTTPs
+- Tree Shaking --> remove unneccesary code
+- Different build for dev and production builds

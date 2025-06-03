@@ -11,7 +11,7 @@
 
   "license": "ISC",
   "author": "Naveen Singh",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "test": "jest"
   },

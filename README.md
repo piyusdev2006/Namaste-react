@@ -12,7 +12,7 @@
 - everytime we build the app it caches in .parcel-cache/    folder --it is like binary files
 - image optimisation
 - Do minification
-- Do bundlng
+- Do bundling
 - Do compressing
 - Consistence Hashing
 - Code splitting

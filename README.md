@@ -19,6 +19,6 @@
 - Differential bunldling - to support older browser and devices or simple browser compatible/Device Compatible
 - Diagnostic
 - Error Handling
-- HTTPs
+- HTTPs : it gives u way to host on https
 - Tree Shaking --> remove unneccesary code
 - Different build for dev and production builds

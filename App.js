@@ -1,13 +1,3 @@
-/**
- nested HTML structure
- <div id="parent">
-    <div id= "child">
-        <h1>I'm Heading 1</h1>
-        <h2>I'm sibling</h2>
-    </div>
- </div>
-  
-*/
 
 // Now create nested element in React
 // ReactElement(object) = HTML(that browser understand)
@@ -26,26 +16,10 @@ const parent = React.createElement("div", { id: "parent" }, [
   ]),
 ]);
 
-// the above code looks very tidious and very ugly and it's more complex than HTML structure
-// Using core react this is how we write the HTML structure
-
-// that's why JSX come into picture --> react can be written in more efficient way using JSX
 
 console.log(parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);  //passing object parent
 
 
-// const heading = React.createElement(
-//     "h1",
-//     {
-//         id: "heading",
-//         xyz: "color"
-//     },
-//     "Hello world from react "
-// );
 
-// console.log(heading);
-
-//   const root = ReactDOM.createRoot(document.getElementById("root"));
-//   root.render(root);

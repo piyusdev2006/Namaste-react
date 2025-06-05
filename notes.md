@@ -70,19 +70,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);  //passing object parent
 
 
-// const heading = React.createElement(
-//     "h1",
-//     {
-//         id: "heading",
-//         xyz: "color"
-//     },
-//     "Hello world from react "
-// );
+// React Element = React.createElement => Object => when rendered onto the DOM becomes a Html element
 
+// const heading1 = React.createElement(
+//   "h1",
+//   { id: "heading" },
+//   "Namaste React 🚀"
+// );
 // console.log(heading);
 
 //   const root = ReactDOM.createRoot(document.getElementById("root"));
-//   root.render(root);
+//   root.render(heading1);
 
 ## Buildng react app from scratch
 ```
@@ -179,9 +177,39 @@ root.render(parent);  //passing object parent
    </h1>
  );
 
-- // creating h1 tag using JSX
+- // creating h1 tag using JSX : at the JSX create ReactElement which is nothing but object
 - const jsxHeading = <h1 id="heading">Namaste React using JSX 🚀</h1>;
 
 - the jsx code we have written is not a pure javascript , the browser only understand the ES6 script
 
--  
+### Now let's create React Component in different way and aslo perform component composition
+
+```
+<!-- React Component -->
+const Title = () => (
+  <h1 className="title">
+    Namaste React using JSX with title component 🚀
+  </h1>
+)
+
+<!-- component composition : composing component to one another , this is how component is put inside component -->
+const HeadingComponent = () => (
+  <div id="container">
+  <!-- JSX component must have one parent element -->
+    <Title /> 
+
+    <h1 className="header">Namaste React Functional Component</h1>
+  </div>
+);
+const FooterComponent = () => (
+    <h1 className="footer">Namaste React Functional Component</h1>
+);  
+
+ <!-- React component using normal function but we need to return it -->
+ const Button = function () {
+   return (
+     <button>Click Me!</button>
+   )
+ }
+
+```

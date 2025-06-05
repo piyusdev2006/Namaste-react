@@ -1,10 +1,9 @@
-*{
-    margin: auto;
-    padding: auto;
-    box-sizing: border-box;
-    background-color: #313131;
+* {
+  margin: auto;
+  padding: 1px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f3ebeb00;
 }
 
-#heading{
-    color: #1860b4;
-}

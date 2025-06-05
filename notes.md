@@ -85,6 +85,7 @@ root.render(parent);  //passing object parent
 //   root.render(root);
 
 ## Buildng react app from scratch
+```
 - create our own create react app from scratch 
 - npm : it is a package manager that are required in our project
 - npm init : it initializes a project with some configuration and create a package.json file
@@ -124,3 +125,63 @@ root.render(parent);  //passing object parent
 "browserslist":[
   "last 2 chrome versions"
 ]
+```
+
+## Episode 03 part 01
+```
+  understanding the fundamaental concept of react
+
+  so first we run the project using the command "npx parcel <filename>"
+
+  what this command means and what it actually does?
+
+  ** this command means we are executing a npm package parcel and  we give a source file which is index.html
+
+  ** instead of writing this command everytime we need to create a script which runs the project via that script
+ **  in package.json under script write the script "start": "parcel index.html" which start the project in developement mode
+
+  another script for production mode : "build": "pacel build index.html"
+  Now we can easily run the project simply using these commands 
+  In dev mode , use: npm run start , shortcut = npm start
+  In prod mode, use: npm run build
+
+  const heading = React.createElement(
+    "h1",
+    { id: "heading" },
+    "Namaste React 🚀"
+  );
+
+  All the above code is creating a react element which is an object menas heading is an object
+
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+
+  root.render(heading);
+
+  when we do root.render this ReactDOM library takes the object heading and converts into HTML and push onto the browser and replace all the things that is inside the root
+
+  <div id="root">
+        <h1>Hello world from HTML</h1>
+  </div> 
+  Everything inside this div is replaced and the oject content is rendered  on the DOM
+
+
+  
+```
+## JSX
+- // JSX - is not HTML in javaScript , it has HTML like syntax but it is not HTML
+- JSX code is transpiled => React.createElement => ReactElement = JS Object => HTML Element (rendered) before it reaches the js engine => parcel => babel 
+- In JSX , we use camelCase to give attribute and we use className similar to class in HTML
+- Single line JSX is valid if it is written like this : const jsxHeading = <h1 id="heading">Namaste React using JSX 🚀</h1>;
+- for multiline code of JSX it need sto wrap inside a parenthesis() so that babel can understand that it where is JSX starting and where it is ending
+- const heading = (
+   <h1 className="head">
+   Namaste React using JSX 🚀
+   </h1>
+ );
+
+- // creating h1 tag using JSX
+- const jsxHeading = <h1 id="heading">Namaste React using JSX 🚀</h1>;
+
+- the jsx code we have written is not a pure javascript , the browser only understand the ES6 script
+
+-  

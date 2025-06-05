@@ -13,6 +13,8 @@
   "author": "Naveen Singh",
   "type": "module",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "devDependencies": {

@@ -1,44 +1,69 @@
 import ReactDOM from "react-dom/client";
 import React from "react";
 
-// REact Element
 
-const element = <span>Hello Doston</span>;
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+            className="logo"
+            src="https://cdn.worldvectorlogo.com/logos/food-network-2-1.svg"
+            alt="Logo"
+        />
+      </div>
+        
+      <div className="nav-items">
+        <ul>
+          <li>About</li>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+const RestaurantCard = () => {
+  return (
+    <div
+      className="restaurant-card" style={{backgroundColor:"f0f0f0"}}>
+      <img
+        className="restaurant-logo"
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/27/d8774289-691f-4e69-a984-c69d850bf328_923886%20(1).jpg"
+        alt="Restaurant Logo"
+        
+      />
+      <p>Krishna Food</p>
+      <p>Burger,Aisan</p>
+      <p>4.4 stars</p>
+      <p>38 Minutes</p>
+    </div>
+  );
+}
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="restaurant-container">
+        <RestaurantCard />
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+}
 
 
-// creating h1 tag using JSX
-const heading = (
-  <h1 className="head">
-    {/* {element} */}
-    Namaste React using JSX 🚀
-    {/* <FooterComponent/> */}
-  </h1>
-)
-
-
-// React Component
-const Title = () => (
-  <p className="title">
-    Namaste React using JSX with title component 🚀
-  </p>
-)
-
-const name = "Naveen Singh";
-const HeadingComponent = () => (
-  <div id="container">
-    {heading}
-
-    <h2>{name}</h2>
-    <Title />
-    <h2 className="header">Namaste React Functional Component</h2>
-  </div>
-);
-const FooterComponent = () => (
-    <h1 className="footer">Namaste React Functional Component</h1>
-);  
-
-
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body/>
+    </div>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
-root.render(<HeadingComponent/>)
+root.render(<AppLayout/>)

@@ -213,3 +213,18 @@ const FooterComponent = () => (
  }
 
 ```
+
+## React Hooks : are utility function can be used anywhere in the project
+-  React Hooks special functions hain jo aapko component ke andar features add karne me help karti hain — jaise state, lifecycle methods, etc.
+- ⚡ Common hooks:
+
+useState → state banana
+
+useEffect → side effects handle karna (API call, timer, etc.)
+
+- another definition of react hooks
+- (Normal javaScript  utility fuction) written by facebook developers inside the react
+- there are multiple react hooks
+- two most important react hooks are 
+- useState() : to create superpowerful state variable in react before using useState , we need to import it as a named import
+- useEffect(): 

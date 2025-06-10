@@ -22,3 +22,13 @@
 - HTTPs : it gives u way to host on https
 - Tree Shaking --> remove unneccesary code
 - Different build for dev and production builds
+
+
+## Two types of export/import 
+    - Default export/import
+- 1: export default component/variable
+- 1: import component/variable from "Path: folder/file"
+
+    - named export/import
+- 2: export const component/variable
+- 2: import {component/varibale} from "path: folder/file"

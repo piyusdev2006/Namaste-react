@@ -1,0 +1,1 @@
+export const LOGO_URL = "https://cdn.worldvectorlogo.com/logos/food-network-2-1.svg";

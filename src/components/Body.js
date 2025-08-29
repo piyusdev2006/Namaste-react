@@ -14,8 +14,8 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.88920&lng=81.94280&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      const data = await fetch(
+        "https://corsproxy.io/https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.88920&lng=81.94280&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const swiggyData = await data.json();
@@ -55,7 +55,8 @@ const Body = () => {
                 );
                 setFilteredRestaurants(filteredRestaurants);
 
-              }}>Search</button>
+              }}>Search
+              </button>
             </div>
           <button
             className="filter-btn"

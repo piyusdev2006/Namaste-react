@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import RestaurantCard from "./RestaurantCard";
 import ShimmerUI from "./ShimmerUI";
+import useOnlineStatus from "../utils/useOnlineStatus";
   
     
 const Body = () => {
@@ -34,11 +35,15 @@ const Body = () => {
     setFilteredRestaurants(restaurants);
   };
 
-  // conditional rendering
-  // if (listOfRestaurants.length === 0) {
-  //   return <ShimmerUI />;
-  // }
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false)
+    return (
+      <h3>🔴 Network Error, Please check your internet connection!!</h3>
+    );
 
+   
+      
+  // conditional rendering
   return listOfRestaurants.length === 0 ? (
     <ShimmerUI />
   ) : (

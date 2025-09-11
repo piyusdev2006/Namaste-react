@@ -18,18 +18,18 @@ const Header = () => {
   }, [btnName]);
 
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-50 sm:bg-slate-400 lg:bg-green-200 shadow-lg mb-1">
       <div className="logo-container">
         <img
-          className="logo"
+          className="w-20 h-20 p-2"
           src={LOGO_URL} // Replace with your logo URL
           alt="Logo"
         />
       </div>
 
-      <div className="nav-items">
-        <ul>
-          <li>Network Status: {onlineStatus ? "🟢 Online" : "🔴 Offline"}</li>
+      <div className="items-center">
+        <ul className="flex gap-4 p-4 m-4">
+          <li className="px-3">Network Status: {onlineStatus ? "🟢 Online" : "🔴 Offline"}</li>
           <li>
             <Link to="/">Home</Link>
           </li>

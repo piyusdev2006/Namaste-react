@@ -13,15 +13,15 @@ const RestaurantCard = (props) => {
   } = resData.info;
 
   return (
-    <div className="restaurant-card" style={{ backgroundColor: "#f0f0f0" }}>
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
       {" "}
       {/* Fixed the backgroundColor value */}
       <img
-        className="restaurant-logo"
+        className="w-[200px] h-[200px] mb-2 rounded-lg"
         alt="Restaurant Logo"
         src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
       />
-      <p>{name}</p>
+      <p className="font-bold py-4 text-lg">{name}</p>
       <p>{cuisines.join(", ")}</p>{" "}
       {/* Changed from cuisine.map to cuisines.join */}
       <p>{avgRating}⭐</p>{" "}

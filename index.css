@@ -1,4 +1,8 @@
-*{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,9 +11,9 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
-}
+} */
 
-.logo { 
+/* .logo { 
   width: 50px;
   height: 50px;
 }
@@ -34,9 +38,9 @@
   background: #f5f5f5;
   color: #4CAF50;
   cursor: pointer;
-}
+} */
 
-.restaurant-container {
+/* .restaurant-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -73,9 +77,9 @@
   height: auto;
   display: block;
   object-fit: contain;
-}
+} */
 
-.filter-btn {
+/* .filter-btn {
   margin: 10px 8px;
   padding: 8px 18px;
   background: linear-gradient(90deg, #4CAF50 60%, #81C784 100%);
@@ -165,9 +169,9 @@
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
   animation: shimmer 1.5s infinite linear;
-}
+} */
 
-@keyframes shimmer {
+/* @keyframes shimmer {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
 }
@@ -279,10 +283,10 @@
   background: linear-gradient(90deg, #1976D2 0%, #00BCD4 100%);
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 4px 12px rgba(33, 203, 243, 0.25);
-}
+} */
 
  
-
+/* 
 .restaurant-menu {
   max-width: 1200px;
   margin: 0 auto;
@@ -395,10 +399,10 @@
   font-weight: 400;
   color: #3e4152;
   margin: 0;
-}
+} */
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .restaurant-summary {
     flex-direction: column;
     text-align: center;
@@ -417,16 +421,14 @@
   .menu-item {
     padding: 16px 0;
   }
-}
+} */
 
 
-.user-card{
+/* .user-card{
   padding: 20px;
   margin: 20px 10px;
   border: 1px solid #3e4152;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* width: 250px; */
-  /* text-align: center; */
-}
+} */
 

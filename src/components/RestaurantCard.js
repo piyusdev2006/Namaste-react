@@ -12,26 +12,50 @@ const RestaurantCard = (props) => {
     areaName,
   } = resData.info;
 
+
   return (
-    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
-      {" "}
-      {/* Fixed the backgroundColor value */}
-      <img
-        className="w-[200px] h-[200px] mb-2 rounded-lg"
-        alt="Restaurant Logo"
-        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
-      />
-      <p className="font-bold py-4 text-lg">{name}</p>
-      <p>{cuisines.join(", ")}</p>{" "}
-      {/* Changed from cuisine.map to cuisines.join */}
-      <p>{avgRating}⭐</p>{" "}
-      {/* Changed from rating.aggregate_rating to avgRating */}
-      <p>{sla.deliveryTime} minutes</p>{" "}
-      {/* Changed from deliveryTime to sla.deliveryTime */}
-      <p>{costForTwo}</p>
-      <p>{areaName}</p>
+    <div className="w-[200px] rounded-xl overflow-hidden shadow-md hover:scale-95 transition-transform duration-200 cursor-pointer">
+      {/* Image with overlay */}
+      <div className="relative">
+        <img
+          className="h-[150px] w-full object-cover"
+          alt="Restaurant"
+          src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
+        />
+      </div>
+
+      {/* Restaurant Details */}
+      <div className="p-2">
+        <p className="font-bold text-base truncate">{name}</p>
+        <p className="text-sm text-gray-600 truncate">{cuisines.join(", ")}</p>
+
+        {/* Ratings & Delivery */}
+        <div className="flex items-center justify-between mt-1 text-sm text-gray-700">
+          <span className="font-semibold">⭐ {avgRating}</span>
+          <span>{sla.deliveryTime} mins</span>
+        </div>
+
+        {/* Cost */}
+        <p className="text-sm text-gray-600">{costForTwo}</p>
+        <p className="text-xs text-gray-500">{areaName}</p>
+      </div>
     </div>
   );
+
+};
+
+// Higher Order Component for adding promoted label
+// it takes RestaurantCard as a prop and returns a new component with added label
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white text-xs px-2 py-1 rounded-lg">Promoted</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;

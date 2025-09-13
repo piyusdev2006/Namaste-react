@@ -18,36 +18,48 @@ const Header = () => {
   }, [btnName]);
 
   return (
-    <div className="flex justify-between bg-pink-50 sm:bg-slate-400 lg:bg-green-200 shadow-lg mb-1">
-      <div className="logo-container">
-        <img
-          className="w-20 h-20 p-2"
-          src={LOGO_URL} // Replace with your logo URL
-          alt="Logo"
-        />
-      </div>
+    <div className="shadow-md bg-white sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+        {/* Logo - Always visible on page load */}
+        <div className="flex items-center">
+          <img
+            src={LOGO_URL}
+            // "https://ik.imagekit.io/rdmuyw7wa/Turantologo.png?tr=r-max,w-80,h-80,c-at_max,bg-transparent"
+            alt="Turanto Logo"
+            className="w-20 h-20 object-contain"
+            loading="eager"
+          />
+        </div>
 
-      <div className="items-center">
-        <ul className="flex gap-4 p-4 m-4">
-          <li className="px-3">Network Status: {onlineStatus ? "🟢 Online" : "🔴 Offline"}</li>
-          <li>
+        {/* Nav Items */}
+        <ul className="flex items-center gap-8 text-gray-700 font-medium">
+          <li className="flex items-center text-sm">
+            <span className="mr-2">Network Status:</span>
+            <span>{onlineStatus ? "🟢 Online" : "🔴 Offline"}</span>
+          </li>
+          <li className="hover:text-orange-500 transition-colors">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="hover:text-orange-500 transition-colors">
             <Link to="/about">About</Link>
           </li>
-          <li>
+          <li className="hover:text-orange-500 transition-colors">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
-            <Link to="/cart">Cart</Link>
+          <li className="hover:text-orange-500 transition-colors">
+            <Link to="/cart" className="relative">
+              Cart
+              <span className="absolute -top-2 -right-3 bg-orange-500 text-white text-xs font-bold rounded-full px-2 py-0.5">
+                0
+              </span>
+            </Link>
           </li>
-          <li>
+          <li className="hover:text-orange-500 transition-colors">
             <Link to="/grocery">Grocery</Link>
           </li>
           <li>
             <button
-              className="login-btn"
+              className="px-4 py-1.5 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition"
               onClick={() =>
                 setBtnName(btnName === "Login" ? "Logout" : "Login")
               }>
@@ -58,6 +70,7 @@ const Header = () => {
       </div>
     </div>
   );
+
 };
 
 export default Header;

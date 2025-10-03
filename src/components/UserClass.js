@@ -23,18 +23,18 @@ class UserClass extends React.Component {
     });
 
 
-    console.log(githubData);
+    // console.log(githubData);
     // console.log(this.props.name + "Child Component Did Mount.");
   }
 
   componentDidUpdate() {
-    console.log("ComponentDidUpdate is Called..");
+    // console.log("ComponentDidUpdate is Called..");
     
   };
 
 
   componentWillUnmount() {
-    console.log("ComponentWillUnmount is Called..");
+    // console.log("ComponentWillUnmount is Called..");
   };
 
   

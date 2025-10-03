@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
@@ -11,6 +12,8 @@ const RestaurantCard = (props) => {
     costForTwo,
     areaName,
   } = resData.info;
+
+  const {loggedInUser} = useContext(UserContext);
 
 
   return (
@@ -38,6 +41,7 @@ const RestaurantCard = (props) => {
         {/* Cost */}
         <p className="text-sm text-gray-600">{costForTwo}</p>
         <p className="text-xs text-gray-500">{areaName}</p>
+        <p className="text-xs text-gray-500">User: {loggedInUser}</p>
       </div>
     </div>
   );

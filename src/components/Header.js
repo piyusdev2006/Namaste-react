@@ -1,14 +1,16 @@
 import { LOGO_URL } from "../utils/constants";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
 
   const [btnName, setBtnName] = useState("Login");
-  console.log("Header rendered");
-
   const onlineStatus = useOnlineStatus();
+  const {loggedInUser} = useContext(UserContext)
+  console.log(loggedInUser);
+  
 
   //Case 1: if no dependency array is provided, useEffect will be called after every render
   //Case 2: if empty [] dependency array is provided, useEffect will be called only once after initial render
@@ -24,7 +26,6 @@ const Header = () => {
         <div className="flex items-center">
           <img
             src={LOGO_URL}
-            // "https://ik.imagekit.io/rdmuyw7wa/Turantologo.png?tr=r-max,w-80,h-80,c-at_max,bg-transparent"
             alt="Turanto Logo"
             className="w-20 h-20 object-contain"
             loading="eager"
@@ -65,6 +66,9 @@ const Header = () => {
               }>
               {btnName}
             </button>
+          </li>
+          <li className="hover:text-orange-500 transition-colors">
+            {loggedInUser}
           </li>
         </ul>
       </div>
